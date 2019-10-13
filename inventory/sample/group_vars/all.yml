@@ -1,1 +1,7 @@
 bindnetaddr: 192.168.1.0
+vip: 192.168.1.xxx
+front_port: "xxxx"
+backend:
+  - "lb1 192.168.1.xxx.6443"
+  - "lb2 192.168.1.xxx.6443"
+  - "lb3 192.168.1.xxx.6443"
