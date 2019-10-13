@@ -1,0 +1,10 @@
+- name: install packages
+  yum:
+    name: {{ items }}
+    state: latest
+    vars:
+      items:
+      - haproxy
+      - corosync
+      - pacemaker
+      - pcs

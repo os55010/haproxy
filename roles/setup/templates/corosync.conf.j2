@@ -1,0 +1,39 @@
+totem {
+        version: 2
+        crypto_cipher: none
+        crypto_hash: none
+        interface {
+                ringnumber: 0
+                bindnetaddr: {{ bindnetaddr }}
+                mcastport: 5405
+                ttl: 1
+        }
+        transport: udpu
+}
+
+logging {
+        fileline: off
+        to_stderr: no
+        to_logfile: yes
+        logfile: /var/log/cluster/corosync.log
+        to_syslog: no
+        debug: off
+        timestamp: on
+        logger_subsys {
+                subsys: QUORUM
+                debug: off
+        }
+}
+nodelist {
+{% for host in groups['all'] %}
+        node {
+                ring0_addr: {{ hostvars[host].ipaddr }}
+                nodeid: {{loop.index}}
+        }
+{% endfor %}
+}
+
+quorum {
+        provider: corosync_votequorum
+        expected_votes: 2
+}
