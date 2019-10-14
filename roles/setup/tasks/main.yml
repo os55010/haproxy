@@ -5,3 +5,5 @@
 - import_tasks: 0020-configure.yml
 
 - import_tasks: 0030-account.yml
+
+- import_tasks: 0040-start.yml

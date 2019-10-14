@@ -1,0 +1,11 @@
+- name: start pcsd
+  systemd:
+    name: pcsd
+    enabled: yes
+    state: started
+
+- name: start haproxy
+  systemd:
+    name: haproxy
+    enabled: yes
+    state: started
