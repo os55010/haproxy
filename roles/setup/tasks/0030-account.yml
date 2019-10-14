@@ -1,0 +1,4 @@
+- name: create haproxy user
+  user:
+    name: haproxy
+    password: "{{ haproxy_password | password_hash('sha512') }}"
