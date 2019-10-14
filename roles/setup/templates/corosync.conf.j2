@@ -27,7 +27,7 @@ logging {
 nodelist {
 {% for host in groups['all'] %}
         node {
-                ring0_addr: {{ hostvars[host][ansible_default_ipv4][address] }}
+                ring0_addr: {{ host }}
                 nodeid: {{loop.index}}
         }
 {% endfor %}
