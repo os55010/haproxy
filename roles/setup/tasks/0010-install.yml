@@ -1,6 +1,6 @@
 - name: install packages
   yum:
-    name: {{ items }}
+    name: "{{ items }}"
     state: latest
     vars:
       items:
