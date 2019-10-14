@@ -16,6 +16,12 @@ pcs cluster start --all
 3.
 [code]
 ----
-pcs status
+pcs property set stonith-enabled=false
 ----
 
+4.
+[code]
+----
+## set vip
+pcs resource create ClusterIP ocf:heartbeat:IPaddr2 ip=xxx.xxx.xxx.xxx cidr_netmask=24 op monitor interval=30
+----
