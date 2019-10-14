@@ -5,4 +5,4 @@ backend:
   - "lb1 192.168.1.xxx.6443"
   - "lb2 192.168.1.xxx.6443"
   - "lb3 192.168.1.xxx.6443"
-haproxy_password: "xxxx"
+hacluster_password: "xxxx"

@@ -1,4 +1,4 @@
-- name: create haproxy user
+- name: create hacluster user
   user:
-    name: haproxy
-    password: "{{ haproxy_password | password_hash('sha512') }}"
+    name: hacluster
+    password: "{{ hacluster_password | password_hash('sha512') }}"
