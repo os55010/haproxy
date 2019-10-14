@@ -1,0 +1,21 @@
+
+1.
+[code]
+----
+pcs cluster auth 192.168.1.xx 192.168.1.yy 192.168.1.zz
+username: hacluster
+password: xxxx
+----
+
+2.
+[code]
+----
+pcs cluster start --all
+----
+
+3.
+[code]
+----
+pcs status
+----
+
